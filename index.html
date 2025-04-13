@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Хоккейные таблицы КХЛ</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700;800&family=Bebas+Neue&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <h1>Таблицы КХЛ</h1>
+            <div class="view-options">
+    <p>Показать:</p>
+    <span id="1" class="active sort">
+        <i class="fas fa-trophy"></i> по конференциям
+    </span>
+    <span id="2" class="sort">
+        <i class="fas fa-layer-group"></i> по дивизионам
+    </span>
+    <span id="3" class="sort">
+        <i class="fas fa-medal"></i> чемпионат
+    </span>
+    <span id="4" class="sort">
+        <i class="fas fa-list-alt"></i> результаты
+    </span>
+</div>
+        </header>
+
+        <main class="main-content">
+            <section id="conference" class="content-section active-section">
+                <div class="box" id="west-conference">
+                    <h2>Регулярный чемпионат. Конференция "Запад"</h2>
+                    <table class="table west">
+                        <thead></thead>
+                        <tbody></tbody>
+                    </table>
+                </div>
+                <div class="box" id="east-conference">
+                    <h2>Регулярный чемпионат. Конференция "Восток"</h2>
+                    <table class="table east">
+                        <thead></thead>
+                        <tbody></tbody>
+                    </table>
+                </div>
+            </section>
+
+            <section id="divisions" class="content-section">
+                <div class="box" id="bobrov-division">
+                    <h2>Регулярный чемпионат. Дивизион Боброва</h2>
+                    <table class="table bobrov">
+                        <thead></thead>
+                        <tbody></tbody>
+                    </table>
+                </div>
+                <div class="box" id="tarasov-division">
+                    <h2>Регулярный чемпионат. Дивизион Тарасова</h2>
+                    <table class="table tarasov">
+                        <thead></thead>
+                        <tbody></tbody>
+                    </table>
+                </div>
+                <div class="box" id="kharlamov-division">
+                    <h2>Регулярный чемпионат. Дивизион Харламова</h2>
+                    <table class="table kharlamov">
+                        <thead></thead>
+                        <tbody></tbody>
+                    </table>
+                </div>
+                <div class="box" id="chernyshev-division">
+                    <h2>Регулярный чемпионат. Дивизион Чернышева</h2>
+                    <table class="table chernyshev">
+                        <thead></thead>
+                        <tbody></tbody>
+                    </table>
+                </div>
+            </section>
+
+            <section id="championship" class="content-section">
+                <div class="box">
+                    <h2>Регулярный чемпионат</h2>
+                    <table class="table championship">
+                        <thead></thead>
+                        <tbody></tbody>
+                    </table>
+                </div>
+            </section>
+
+            <section id="results" class="content-section">
+                <div class="results-container">
+                    <h2>Последние результаты матчей</h2>
+                    <div id="matches-list" class="matches-list">
+                        <p class="no-matches">Нет сохраненных результатов</p>
+                    </div>
+
+                    <div class="match-controls">
+                        <div id="match-result" class="match-result">
+                            <span id="hometeam"></span><span id="home-score">0</span><span>:</span><span id="guest-score">0</span><span id="guestteam"></span>
+                        </div>
+                        <div id="match-form" class="match-form">
+                            <label for="home">Хозяева:</label>
+                            <input type="text" id="home" placeholder="Название команды">
+                            <label for="guests">Гости:</label>
+                            <input type="text" id="guests" placeholder="Название команды">
+                            <button id="calculate" class="btn">Рассчитать результат</button>
+                        </div>
+                        <button id="add" class="btn add-btn">
+    <i class="fas fa-plus-circle"></i> Добавить матч
+</button>
+                    </div>
+                </div>
+            </section>
+        </main>
+    </div>
+<div class="theme-switcher">
+    <button class="theme-toggle" id="themeToggle" aria-label="Переключить тему"></button>
+    <span class="theme-label">Тема</span>
+</div>
+</body>
+</html>
